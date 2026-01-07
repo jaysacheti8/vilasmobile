@@ -69,35 +69,39 @@ const ServicesPreview = () => {
   return (
     <section className="section-padding" ref={ref}>
       <div className="container-wide">
-        <div className="text-center mb-16">
+        {/* Heading */}
+        <div className="text-center mb-10 md:mb-16">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
-            className="text-burgundy text-sm font-medium tracking-[0.2em] uppercase mb-4"
+            className="text-burgundy text-xs sm:text-sm font-medium tracking-[0.2em] uppercase mb-3 md:mb-4"
           >
             What We Offer
           </motion.p>
+
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="heading-section text-foreground mb-6"
+            className="heading-section text-foreground mb-4 md:mb-6"
           >
             Our Services
           </motion.h2>
+
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-elegant max-w-2xl mx-auto"
+            className="text-elegant text-sm sm:text-base max-w-2xl mx-auto"
           >
-            From intimate weddings to grand corporate events, we bring the same level of 
+            From intimate weddings to grand corporate events, we bring the same level of
             dedication and artistry to every project.
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Services Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
           {services.map((service, index) => (
             <motion.div
               key={service.title}
@@ -115,13 +119,17 @@ const ServicesPreview = () => {
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <h3 className={`font-serif text-primary-foreground mb-2 ${
-                    index === 0 ? 'text-2xl md:text-3xl' : 'text-xl'
-                  }`}>
+                <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6">
+                  <h3
+                    className={`font-serif text-primary-foreground mb-1 ${
+                      index === 0
+                        ? 'text-lg sm:text-xl md:text-3xl'
+                        : 'text-base sm:text-lg'
+                    }`}
+                  >
                     {service.title}
                   </h3>
-                  <p className="text-primary-foreground/80 text-sm">
+                  <p className="text-primary-foreground/80 text-xs sm:text-sm">
                     {service.description}
                   </p>
                 </div>
@@ -130,11 +138,12 @@ const ServicesPreview = () => {
           ))}
         </div>
 
+        {/* CTA */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="text-center mt-12"
+          className="text-center mt-8 md:mt-12"
         >
           <Link
             to="/services"

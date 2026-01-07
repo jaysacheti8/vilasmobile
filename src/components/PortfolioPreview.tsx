@@ -29,35 +29,39 @@ const PortfolioPreview = () => {
     <>
       <section className="section-padding bg-secondary/30" ref={ref}>
         <div className="container-wide">
-          <div className="text-center mb-16">
+          {/* Heading */}
+          <div className="text-center mb-10 md:mb-16">
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6 }}
-              className="text-burgundy text-sm font-medium tracking-[0.2em] uppercase mb-4"
+              className="text-burgundy text-xs sm:text-sm font-medium tracking-[0.2em] uppercase mb-3 md:mb-4"
             >
               Portfolio
             </motion.p>
+
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="heading-section text-foreground mb-6"
+              className="heading-section text-foreground mb-4 md:mb-6"
             >
               Our Work
             </motion.h2>
+
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-elegant max-w-2xl mx-auto"
+              className="text-elegant text-sm sm:text-base max-w-2xl mx-auto"
             >
-              A glimpse into our portfolio showcasing the artistry and excellence 
+              A glimpse into our portfolio showcasing the artistry and excellence
               we bring to every project.
             </motion.p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+          {/* Grid */}
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 md:gap-6">
             {portfolioImages.map((image, index) => (
               <motion.div
                 key={index}
@@ -73,7 +77,7 @@ const PortfolioPreview = () => {
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/40 transition-colors duration-300 flex items-center justify-center">
-                  <span className="text-primary-foreground opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-sm font-medium tracking-wide">
+                  <span className="text-primary-foreground opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-xs sm:text-sm font-medium tracking-wide">
                     {image.category}
                   </span>
                 </div>
@@ -81,11 +85,12 @@ const PortfolioPreview = () => {
             ))}
           </div>
 
+          {/* CTA */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.8 }}
-            className="text-center mt-12"
+            className="text-center mt-8 md:mt-12"
           >
             <Link
               to="/our-work"

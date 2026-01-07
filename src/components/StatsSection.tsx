@@ -20,8 +20,7 @@ const Counter = ({ end, suffix = '', isInView }: CounterProps) => {
     const animate = (timestamp: number) => {
       if (!startTime) startTime = timestamp;
       const progress = Math.min((timestamp - startTime) / duration, 1);
-      
-      // Easing function for smooth animation
+
       const easeOutQuart = 1 - Math.pow(1 - progress, 4);
       setCount(Math.floor(easeOutQuart * end));
 
@@ -35,7 +34,8 @@ const Counter = ({ end, suffix = '', isInView }: CounterProps) => {
 
   return (
     <span>
-      {count.toLocaleString()}{suffix}
+      {count.toLocaleString()}
+      {suffix}
     </span>
   );
 };
@@ -52,9 +52,9 @@ const StatsSection = () => {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section className="py-16 md:py-24 bg-primary" ref={ref}>
+    <section className="py-12 sm:py-16 md:py-24 bg-primary" ref={ref}>
       <div className="container-wide">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 md:gap-12">
           {stats.map((stat, index) => (
             <motion.div
               key={stat.label}
@@ -63,10 +63,14 @@ const StatsSection = () => {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="text-center"
             >
-              <div className="text-4xl md:text-5xl lg:text-6xl font-serif text-burgundy-light mb-2">
-                <Counter end={stat.value} suffix={stat.suffix} isInView={isInView} />
+              <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif text-burgundy-light mb-1 md:mb-2">
+                <Counter
+                  end={stat.value}
+                  suffix={stat.suffix}
+                  isInView={isInView}
+                />
               </div>
-              <p className="text-primary-foreground/70 text-sm md:text-base">
+              <p className="text-primary-foreground/70 text-xs sm:text-sm md:text-base">
                 {stat.label}
               </p>
             </motion.div>

@@ -32,8 +32,8 @@ const Navbar = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? 'bg-background/95 backdrop-blur-md shadow-sm py-3'
-          : 'bg-transparent py-5'
+          ? 'bg-background/95 backdrop-blur-md shadow-sm py-2 md:py-3'
+          : 'bg-transparent py-4 md:py-5'
       }`}
     >
       <div className="container-wide">
@@ -43,7 +43,7 @@ const Navbar = () => {
             <img
               src={logo}
               alt="Vilas Photo Studio"
-              className="h-45 md:h-32 w-auto scale-[1.6]"
+              className="h-20 md:h-32 w-auto scale-[1.1] md:scale-[1.6]"
             />
           </Link>
 
@@ -67,7 +67,7 @@ const Navbar = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden relative z-10 p-2"
+            className="md:hidden relative z-10 p-3"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -90,12 +90,12 @@ const Navbar = () => {
             transition={{ duration: 0.3 }}
             className="absolute top-full left-0 right-0 bg-background/98 backdrop-blur-md shadow-lg md:hidden"
           >
-            <ul className="flex flex-col py-6">
+            <ul className="flex flex-col py-4">
               {navLinks.map((link) => (
                 <li key={link.path}>
                   <Link
                     to={link.path}
-                    className={`block px-6 py-4 text-sm font-medium tracking-wide uppercase transition-colors duration-300 ${
+                    className={`block px-6 py-4 text-base font-medium tracking-wide uppercase transition-colors duration-300 ${
                       location.pathname === link.path
                         ? 'text-burgundy bg-secondary/50'
                         : 'text-foreground hover:text-burgundy hover:bg-secondary/30'
