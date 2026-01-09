@@ -20,14 +20,11 @@ import corporate4 from '@/assets/image (4).webp';
 import corporate5 from '@/assets/image (5).webp';
 import fashion1 from '@/assets/f1.webp';
 import fashion2 from '@/assets/f2.webp';
-import wdv1 from '@/assets/wdv1.webp';
-import wdv2 from '@/assets/wdv2.webp';
-import wdv3 from '@/assets/wdv3.webp';
-import fdv2 from '@/assets/fdv2.webp';
+// /import wdv1 from '@/assets/wdv1.webp';
+//import wdv2 from '@/assets/wdv2.webp';
+//import wdv3 from '@/assets/wdv3.webp';
 import fdv3 from '@/assets/fdv3.webp';
 import fdv4 from '@/assets/fdv4.webp';
-import idv1 from '@/assets/idv1.webp';
-import idv2 from '@/assets/idv2.webp';
 import idv3 from '@/assets/idv3.webp';
 import idv4 from '@/assets/idv4.webp';
 import idv5 from '@/assets/idv5.webp';
@@ -36,6 +33,25 @@ import svd2 from '@/assets/svd2.webp';
 import svd7 from '@/assets/svd7.webp';
 import ptv1 from '@/assets/ptv1.webp';
 import pdv2 from '@/assets/pdv2.webp';
+import w1 from '@/assets/w1.png';
+import w2 from '@/assets/w2.png';
+import f3 from '@/assets/f3.png';
+import lady from '@/assets/LADY.png';
+import foot from '@/assets/foot.png';
+import ss from '@/assets/bd.webp';
+import sc from '@/assets/hey.webp';
+import event from '@/assets/eventme.webp';
+import chess from '@/assets/chess.webp';
+import jd from '@/assets/jd.webp';
+import chair from '@/assets/chair.webp';
+import whi from '@/assets/whi.webp';
+import bcg from '@/assets/bcg.webp';
+import bicep from '@/assets/bic.webp';
+import jeans from '@/assets/jean.webp';
+import jeans2 from '@/assets/j2.webp';
+import hans from '@/assets/hand.webp';
+
+
 
 const categories = ['All', 'Weddings', 'Corporate', 'Fashion', 'Industrial', 'Social', 'Portraits'];
 
@@ -55,14 +71,13 @@ const portfolioItems = [
   { src: corporate5, alt: 'Corporate Conference', category: 'Corporate' },
   { src: fashion1, alt: 'Fashion Editorial', category: 'Fashion' },
   { src: fashion2, alt: 'Fashion Editorial', category: 'Fashion' },
-  { src: wdv1, alt: 'Wedding Portrait', category: 'Weddings' },
-  { src: wdv2, alt: 'Wedding Portrait', category: 'Weddings' },
-  { src: wdv3, alt: 'Wedding Portrait', category: 'Weddings' },
-  { src: fdv2, alt: 'Fashion Editorial', category: 'Fashion' },
+  //{ src: wdv1, alt: 'Wedding Portrait', category: 'Weddings' },
+  //{ src: wdv2, alt: 'Wedding Portrait', category: 'Weddings' },
+  //{ src: wdv3, alt: 'Wedding Portrait', category: 'Weddings' },
   { src: fdv3, alt: 'Fashion Editorial', category: 'Fashion' },
   { src: fdv4, alt: 'Fashion Editorial', category: 'Fashion' },
-  { src: idv1, alt: 'Manufacturing Facility', category: 'Industrial' },
-  { src: idv2, alt: 'Manufacturing Facility', category: 'Industrial' },
+  { src: f3, alt: 'Fashion Editorial', category: 'Fashion' },
+  
   { src: idv3, alt: 'Manufacturing Facility', category: 'Industrial' },
   { src: idv4, alt: 'Manufacturing Facility', category: 'Industrial' },
   { src: idv5, alt: 'Manufacturing Facility', category: 'Industrial' },
@@ -71,8 +86,24 @@ const portfolioItems = [
   { src: svd7, alt: 'Republic Day', category: 'Social' },
   { src: ptv1, alt: 'Family Portrait', category: 'Portraits' },
   { src: pdv2, alt: 'Family Portrait', category: 'Portraits' },
-  
-  
+  { src: w1, alt: 'Wedding Portrait', category: 'Weddings' },
+  { src: w2, alt: 'Wedding Portrait', category: 'Weddings' },
+  { src: lady, alt: 'Wedding Portrait', category: 'Weddings' },
+  { src: foot, alt: 'Wedding Portrait', category: 'Weddings' },
+  { src: ss, alt: 'Body Building Competition Photoshoot', category: 'Social' },
+  { src: sc, alt: 'Body Building Competition Photoshoot', category: 'Social' },
+  { src: event, alt: 'Corporate Conference', category: 'Corporate' },
+  { src: chess, alt: 'Corporate Conference', category: 'Corporate' },
+  { src: jd, alt: 'Corporate Conference', category: 'Corporate' },
+  { src: bcg, alt: 'Corporate Conference', category: 'Corporate' },
+  { src: chair, alt: 'Corporate Conference', category: 'Corporate' },
+  { src: whi, alt: 'Social Event', category: 'Social' },
+  { src: bicep, alt: 'Body Building Competition Photoshoot', category: 'Social' },
+  { src: jeans, alt: 'Fashion Photography', category: 'Fashion' },
+  { src: jeans2, alt: 'Fashion Photography', category: 'Fashion' },
+  { src: hans, alt: 'Wedding Portrait', category: 'Wedding' },
+
+
 ];
 
 const OurWork = () => {

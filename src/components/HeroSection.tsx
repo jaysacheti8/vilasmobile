@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { ArrowDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import heroImage from '@/assets/bimgv.jpg';
+import heroImage from '@/assets/h12.png';
 
 const HeroSection = () => {
   const scrollToContent = () => {
@@ -36,7 +36,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-[#8B1E1E] text-sm sm:text-base md:text-xl font-semibold tracking-[0.3em] md:tracking-[0.4em] uppercase mb-6 md:mb-9 drop-shadow-[0_3px_8px_rgba(0,0,0,0.45)]"
+            className="text-[#FFFFFF] text-sm sm:text-base md:text-xl font-semibold tracking-[0.3em] md:tracking-[0.4em] uppercase mb-6 md:mb-9 drop-shadow-[0_3px_8px_rgba(0,0,0,0.45)]"
           >
             Est. 1975
           </motion.p>

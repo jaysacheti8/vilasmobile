@@ -39,6 +39,14 @@ const testimonials = [
     text: 'My family and I have been visiting Vilas Photo Studio for almost a decade. They are very professional and excellent at photo editing. Outstanding service and highly recommended.',
     rating: 5,
   },
+
+  {
+    name: 'Patrick Graham',
+    text: 'Great service, friendly people, all your scanning, printing, copying, photo needs in one place!',
+    rating: 5,
+  },
+
+
 ];
 
 const TestimonialsSection = () => {

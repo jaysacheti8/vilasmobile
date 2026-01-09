@@ -12,7 +12,10 @@ const Footer = () => {
             <img
               src={logo}
               alt="Vilas Photo Studio"
-              className="h-10 md:h-12 w-auto brightness-0 invert"
+            className="h-28 md:h-40 lg:h-48 w-auto brightness-0 invert"
+
+
+
             />
             <p className="text-primary-foreground/70 text-sm leading-relaxed max-w-xs">
               Capturing life's precious moments with artistry and excellence for over 25 years.
